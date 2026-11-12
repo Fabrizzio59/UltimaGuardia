@@ -1,0 +1,19 @@
+:root { color-scheme: dark; font-family: Arial, sans-serif; color: #fff; }
+* { box-sizing: border-box; }
+body { margin: 0; overflow: hidden; background: #15191d; }
+canvas { display: block; }
+[hidden] { display: none !important; }
+#balas { position: fixed; right: 32px; bottom: 28px; z-index: 2; font-size: 44px; font-weight: bold; line-height: 1; text-shadow: 0 2px 5px #000; pointer-events: none; }
+#mira { position: fixed; left: 50%; top: 50%; width: 18px; height: 18px; transform: translate(-50%, -50%); z-index: 2; pointer-events: none; filter: drop-shadow(0 1px 2px #000); }
+#mira::before, #mira::after { content: ''; position: absolute; background: #fff; }
+#mira::before { width: 18px; height: 2px; top: 8px; }
+#mira::after { width: 2px; height: 18px; left: 8px; }
+#menu { position: fixed; inset: 0; z-index: 3; background: radial-gradient(ellipse at center, #26333bf2, #080c12fc); }
+#menu[data-estado="pausa"] { background: radial-gradient(ellipse at center, #253b4ae8, #080f19fa); }
+#menu[data-estado="derrota"] { background: radial-gradient(ellipse at center, #4a1c24f2, #120609fc); }
+#menu[data-estado="victoria"] { background: radial-gradient(ellipse at center, #20473af2, #06140ffc); }
+#jugar { width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 20px; border: 0; padding: 32px; background: transparent; color: inherit; cursor: pointer; text-align: center; font-family: inherit; }
+#jugar:disabled { cursor: wait; }
+#jugar:focus-visible { outline: 2px solid #ffffff88; outline-offset: -12px; }
+#titulo { font-size: clamp(30px, 6vw, 68px); font-weight: bold; letter-spacing: 3px; }
+#detalle { font-size: clamp(16px, 2.5vw, 23px); line-height: 1.5; color: #dbe8df; }

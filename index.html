@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Última guardia · FPS</title>
+  <link rel="stylesheet" href="./estilos.css">
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/"
+    }
+  }
+  </script>
+</head>
+<body>
+  <div id="mira" aria-hidden="true" hidden></div>
+  <div id="balas" aria-label="Balas restantes" hidden>12</div>
+  <main id="menu" hidden>
+    <button id="jugar" disabled>
+      <span id="titulo">Iniciar misión</span>
+      <span id="detalle" hidden></span>
+    </button>
+  </main>
+  <script type="module" src="./main.js"></script>
+</body>
+</html>
